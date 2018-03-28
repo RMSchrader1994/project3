@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <style>
+    body{
+        background-image: url("/media/images/home_bckgrnd.jpg");
+        background-size: cover;
+    }
+    input {
+        background-color: rgba(255,255,255,.4);
+        color: white;
+        width: 25%;
+        margin-left: 50px;
+        margin-top: 550px;
+        padding: 20px;
+        font-size: 100%;
+        text-align: left;
+        border: none;
+    }
+    input:hover {
+        background-color: rgba(255,255,255,0);
+    }
+    </style>
+</head>
+<body>
+    <a href="{% url 'register' %}"><input type="submit" name="Register" value="Register"/></a>
+    <a href="{% url 'login' %}"><input type="submit" name="Log In" value="Log In"/></a>
+</body>
+</html>
