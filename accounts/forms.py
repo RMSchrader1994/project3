@@ -44,4 +44,6 @@ class UserRegistrationForm(UserCreationForm):
             instance.save()
 
         return instance
+
+
     

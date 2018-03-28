@@ -22,10 +22,12 @@ from django.conf import settings
 from home.views import get_index
 
 from accounts import urls as accounts_urls
+from messenger import urls as messenger_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^$', get_index, name='home'),
     url(r'^accounts/', include(accounts_urls)),
+    url(r'^messenger/', include(messenger_urls)),
 ]

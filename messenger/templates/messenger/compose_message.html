@@ -1,0 +1,36 @@
+{% extends 'home/base.html' %}
+{% load bootstrap_tags %}
+
+{% block content %}
+<style>
+        body {
+            background-image: url("/media/images/message2_bckgrnd.jpg");
+            background-size: contain;
+        }
+        form {
+            background-color: rgba(212, 175, 55, .3);
+            padding: 50px;
+            color: rgba(255,255,255,.8);
+        }
+        input {
+        background-color: rgba(0,0,0,.55);
+        color: white;
+        width: 25%;
+        padding: 15px;
+        font-size: 25px;
+        text-align: center;
+        border: solid white 5px;
+    }
+        input:hover {
+        background-color: rgba(255,255,255,0);
+        }
+    </style>
+<h1>Compose</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form  | as_bootstrap }}
+    <input type="Submit" value="Send"/><i class="fa fa-send-o"></i>
+</form>
+
+{% endblock content %}

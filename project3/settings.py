@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'accounts',
+    'messenger',
     'django_forms_bootstrap',
     'django_gravatar',
 ]
