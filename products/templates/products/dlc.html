@@ -1,0 +1,303 @@
+{% extends "home/base.html" %}
+{% load gravatar %}
+{% block content %}
+<style>
+    body {
+         background: #355c7d;
+         background: -webkit-linear-gradient(to bottom, #355c7d, #6c5b7b, #c06c84);
+         background: linear-gradient(to bottom, #355c7d, #6c5b7b, #c06c84);
+    }
+    .product_img {
+        width: 50%;
+        height: 200px;
+        margin-bottom: 15px;
+    } 
+    .info {
+        float: right;
+        width: 45%;
+    }
+    ul {
+        color: black;
+    }
+    
+    h2, h4, h6 {
+        color: #264040;
+    }
+    
+    h1 {
+        color: white;
+    }
+    
+</style>
+
+<div class="row">
+<div class="col-lg-12">
+<h1>Store</h1>
+</div>
+</div>
+<hr>
+<div class='row'>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_HR.png" class="product_img"></img>
+            <div class="info">
+                <h2>Horns of the Reach</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>Tackle 2 all-new dungeons: Bloodroot Forge and Falkreath Hold</li>
+                <li>Earn new unique item sets, Monster Masks</li>
+                <li>New Achievements, boss collectibles, and titles</li>
+                <li>Complete all Horns of the Reach Achievements to earn exclusive costumes and a new dye</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_CC.png" class="product_img"></img>
+            <div class="info">
+                <h2>Clockwork City</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>Journey into Sotha Sil’s Clockwork City to investigate a new Daedric threat</li>
+                <li>Explore a unique zone packed with unforgettable architecture, strange creatures, and powerful hybrid monsters</li>
+                <li>Enter the Asylum Sanctorium and earn new Asylum Weapons by defeating the Clockwork Saints in this 12-player challenge</li>
+                <li>Earn new unique armor sets, character customization items, crafting motifs, and more!</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_DB.png" class="product_img"></img>
+            <div class="info">
+                <h2>Dragon Bones</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>Venture into Fang Lair, put an end to a necromancer threat, and face off against a fearsome reanimated dragon</li>
+                <li>Fight your way through cultists in Scalecaller Peak and stop them from unleashing a terrible disease upon Tamriel</li>
+                <li>Unlock new unique item sets, Monster Masks, Achievements and more, exclusive to this DLC</li>
+                <li>Journey through Tamriel with an exclusive hat: the Renegade Dragon Priest Mask, yours to claim simply by stepping foot in either of the new dungeons</li>
+            </ul>
+    </div>
+</div><hr>
+<div class='row'>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_IC.png" class="product_img"></img>
+            <div class="info">
+                <h2>Imperial City</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>At level 10, enter a sprawling PvP/PvE space, including the six Imperial City Districts</li>
+                <li>Hours of compelling story content and side quests</li>
+                <li>Two all-new group dungeons, each with Normal and Veteran versions</li>
+                <li>Tel Var Stones – a new currency for legendary armor</li>
+                <li>The Xivkyn racial motif style and new craftable item sets</li>
+                <li>Imperial City-themed collectibles</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_O.png" class="product_img"></img>
+            <div class="info">
+                <h2>Orsinium</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>20 hours of story content</li>
+                <li>A colossal new zone for players of all levels</li>
+                <li>A new single player challenge, The Maelstrom Arena</li>
+                <li>Two large public dungeons, Old Orsinium and Rkindaleft</li>
+                <li>Powerful new gear to collect and a new unique style to craft</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_TG.png" class="product_img"></img>
+            <div class="info">
+                <h2>Thieves Guild</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>Join an iconic Elder Scrolls guild</li>
+                <li>Unlock a Thieves Guild themed skill line</li>
+                <li>Experience all-new epic story content revolving around this iconic Elder Scrolls guild</li>
+                <li>Accept daily heist missions and take part in new criminal activities</li>
+                <li>Take on the challenge of a new 12-player Trial</li>
+                <li>Collect new items, armor sets, and more!</li>
+            </ul>
+    </div>
+</div><hr>
+<div class='row'>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_DB.png" class="product_img"></img>
+            <div class="info">
+                <h2>Dark Brotherhood</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>Join the Dark Brotherhood and become a killer for hire</li>
+                <li>Explore an all-new region of the Gold Coast</li>
+                <li>Profit from heinous murders with new repeatable quests</li>
+                <li>Learn new skills to become the deadliest assassin in Tamriel</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_SH.png" class="product_img"></img>
+            <div class="info">
+                <h2>Shadows of the Hist</h2>
+                <h4>DLC</h4>
+                <h6>$20.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Available for free with an ESO Plus membership</li>
+                <li>2 all-new Argonian themed dungeons, each with Normal and Veteran versions</li>
+                <li>2 new Monster Masks and 6 new unique item sets</li>
+                <li>New Achievements, collectibles and titles</li>
+                <li>Unique Heroic Personality reward</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_OT.jpg" class="product_img"></img>
+            <div class="info">
+                <h2>One Tamriel</h2>
+                <h4>Update</h4>
+                <h6>Free</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Adventure without limits in Tamriel - anywhere and with anyone</li>
+                <li>Prove your mettle and challenge friends and strangers to a duel</li>
+                <li>New weapon ultimates add ammunition to your arsenal of powers</li>
+                <li>Exciting solo adventures await in a revamped Craglorn</li>
+                <li>Celebrate the high holidays with new quests and fun new looks</li>
+            </ul>
+    </div>
+</div><hr>
+<div class='row'>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_H.jpg" class="product_img"></img>
+            <div class="info">
+                <h2>Homestead</h2>
+                <h4>Update</h4>
+                <h6>Free</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Dozens of homes available with unique architectural styles</li>
+                <li>Thousands of items to customize your space</li>
+                <li>Brand new crafting system to build furniture as decoration or to sell</li>
+                <li>Invite friends and guildmates over to your home</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_M.jpg" class="product_img"></img>
+            <div class="info">
+                <h2>Morrowind</h2>
+                <h4>Chapter</h4>
+                <h6>$40.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Return to Morrowind. Explore the iconic island of Vvardenfell</li>
+                <li>A new class. The Warden, with nature-based magic and a War Bear combat ally</li>
+                <li>A new PvP mode. Battlegrounds - small-scale, three team, 4v4v4 battles in arena-like environments</li>
+                <li>An epic new Elder Scrolls story. 700 years prior to TES III, help Vivec save the world</li>
+                <li>A new trial. A fresh 12-player Trial to prove your skills</li>
+            </ul>
+    </div>
+    <div class='col-md-4'>
+        <img src="/media/images/dlc_SI.jpg" class="product_img"></img>
+            <div class="info">
+                <h2>Summerset</h2>
+                <h4>Chapter</h4>
+                <h6>$40.00</h6>
+                    <form action="{% url 'add_to_cart' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{product.id}}"/>
+                    <input type="hidden" name="quantity" value="1"/>
+                    <input class="btn btn-success" type="submit" value="Add To Cart"/>
+                    </form>
+            </div>
+            <ul>
+                <li>Explore a stunning new zone: the home of the High Elves</li>
+                <li>Rejoin old friends, forge new alliances, and unravel a dark conspiracy that threatens the world's very existence</li>
+                <li>Travel to the island of Artaeum and unlock a new Skill Line of powerful combat abilities</li>
+                <li>Forge potent new gear with Jewelry Crafting and bolster your power</li>
+                <li>Gather your allies and take on a challenging new 12-player Trial, Cloudrest</li>
+            </ul>
+    </div>
+</div><hr>
+{% endblock %}

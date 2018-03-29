@@ -23,6 +23,8 @@ from home.views import get_index
 
 from accounts import urls as accounts_urls
 from messenger import urls as messenger_urls
+from cart import urls as cart_urls
+from products import urls as products_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -30,4 +32,6 @@ urlpatterns = [
     url(r'^$', get_index, name='home'),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^messenger/', include(messenger_urls)),
+    url(r'^cart/', include(cart_urls)),
+    url(r'^products/', include(products_urls)),
 ]

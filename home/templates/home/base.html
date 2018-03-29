@@ -50,6 +50,8 @@
         <ul class="nav navbar-nav">
             {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-basket"></i> Cart</a></li>
+                <li><a href="{% url 'get_dlc' %}"><i class="fa fa-tv"></i> DLCs</a></li>
                 <li><a href="{% url 'inbox' %}"><i class="fa fa-envelope-square"></i> Inbox</a></li>
                 <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
             {% else %}
