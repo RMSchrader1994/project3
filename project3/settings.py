@@ -26,7 +26,8 @@ SECRET_KEY = 'ntk$-o)b+xh#iw5o&os6+aj$$n2u26)$nak##3-3x6&01n-9re'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['project3-rmschrader1994.c9users.io']
+ALLOWED_HOSTS = ['project3-rmschrader1994.c9users.io',
+                    'becca-elderscrollsonline.herokuapp.com']
 
 
 # Application definition
