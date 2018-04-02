@@ -44,8 +44,7 @@ INSTALLED_APPS = [
     'accounts',
     'messenger',
     'products',
-    'checkout',
-    'cart',
+    
     'django_forms_bootstrap',
     'django_gravatar',
 ]
@@ -73,8 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',
-                'cart.contexts.cart_count'
+                'django.template.context_processors.media'
             ],
         },
     },
