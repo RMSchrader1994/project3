@@ -40,12 +40,19 @@
         .wrapper {
           margin-left: 140px;
         }
+        .logo {
+            width: 100%;
+        }
+        .navbar-nav {
+            margin-top: 75px;
+        }
+        
     </style>
 </head>
 <body>
     <!-- Fixed masthead -->
 <nav class="navbar navbar-inverse navbar-fixed-left">
-    <a class="navbar-brand" href="#">LOGO</a>
+    <a class="navbar-brand" href="{% url 'profile' %}"><img src="/media/images/elder-scrolls-online_logo.jpg" class="logo"></img></a>
         <ul class="nav navbar-nav">
             {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>

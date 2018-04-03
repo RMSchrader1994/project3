@@ -1,6 +1,25 @@
 {% extends "home/base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
+<style>
+    body {
+        background: #283c86;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+    }
+    legend {
+        color: white;
+    }
+    .containers {
+        padding: 30px;
+        width: 100%;
+    }
+    form {
+        background-color: rgba(0,0,0, .4);
+        padding: 20px;
+    }
+</style>
     <form role="form" method="post" >
         <legend>Create a new account</legend>
         {% csrf_token %}
