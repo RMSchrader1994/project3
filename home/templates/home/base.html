@@ -46,6 +46,13 @@
         .navbar-nav {
             margin-top: 75px;
         }
+        .navbar {
+            background: #373737;
+        }
+        span {
+            color: #C0B283;
+            font-size: 15px;
+        }
         
     </style>
 </head>
@@ -55,14 +62,15 @@
     <a class="navbar-brand" href="{% url 'profile' %}"><img src="/media/images/elder-scrolls-online_logo.jpg" class="logo"></img></a>
         <ul class="nav navbar-nav">
             {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-                <li><a href="{% url 'get_dlc' %}"><i class="fa fa-tv"></i> Store</a></li>
-                <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart <label class="badge badge-light">{{ items_in_cart }}</label></a></li>
-                <li><a href="{% url 'inbox' %}"><i class="fa fa-envelope-square"></i> Inbox</a></li>
-                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i><span> Profile</span></a></li>
+                <li><a href="{% url 'character_list' %}"><i class="fa fa-user"></i><span> Characters</span></a></li>
+                <li><a href="{% url 'get_dlc' %}"><i class="fa fa-tv"></i><span> Store</span></a></li>
+                <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i><span> Cart </span><label class="badge badge-light">{{ items_in_cart }}</label></a></li>
+                <li><a href="{% url 'inbox' %}"><i class="fa fa-envelope-square"></i><span> Inbox </span><label class="badge badge-light">{{ user.messages_received.all|length }}</label></a></li>
+                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i><span> Log Out</span></a></li>
             {% else %}
-                <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
-                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i><span> Register</span></a></li>
+                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i><span> Log In</span></a></li>
             {% endif %}
         </ul>
 </nav>

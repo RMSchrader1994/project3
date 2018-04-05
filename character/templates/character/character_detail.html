@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <h1>{{ characters.name }}</h1>
+        {% if characters.image %}
+            <img src="{{ MEDIA_URL }}{{characters.image}}"/>
+        {% endif %}
+    <p>{{ characters.description }}</p>
+    
+<button class="btn btn-default" onclick="location.href='{% url 'character_list' %}'">Back To Blog</button>
+{% endblock content %}

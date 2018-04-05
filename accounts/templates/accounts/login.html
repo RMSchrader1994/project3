@@ -1,26 +1,26 @@
 {% extends "home/base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-<style>
+    <style>
     body {
-        background: #00b09b;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    color: white;
+    background: #DCD0C0;
+    color: #373737;
     }
     legend {
-        color: white;
+    color: #C0B283;
     }
     .containers {
-        padding: 30px;
-        width: 100%;
+    padding: 30px;
+    width: 100%;
     }
     form {
-        background-color: rgba(0,0,0, .4);
-        padding: 20px;
+    background-color: #F4F4F4;
+    padding: 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
     }
-</style>
+    </style>
     <form role="form" method="post">
         <legend>Login</legend>
         {% csrf_token %}

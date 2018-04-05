@@ -26,6 +26,7 @@ from messenger import urls as messenger_urls
 from products import urls as products_urls
 from checkout import urls as checkout_urls
 from cart import urls as cart_urls
+from character import urls as character_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -36,5 +37,5 @@ urlpatterns = [
     url(r'^products/', include(products_urls)),
     url(r'^checkout/', include(checkout_urls)),
     url(r'^cart/', include(cart_urls)),
-    
+    url(r'^character/', include(character_urls)),
 ]

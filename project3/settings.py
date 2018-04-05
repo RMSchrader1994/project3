@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'messenger',
     'products',
     'checkout',
+    'character',
     'cart',
     'django_forms_bootstrap',
     'django_gravatar',

@@ -3,19 +3,22 @@
 {% block content %}
 <style>
     body {
-        background: #70e1f5;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #DCD0C0
     }
     h1 {
-            color: black;
+            color: #373737;
             font-family: 'Eagle Lake', cursive;
         }
-    .table {
-        color: white;
-        background-color: rgba(0,0,0,.4);
+     .table {
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 75%;
+        color: #373737;
+        background-color: #F4F4F4;
     }
 </style>
+<br />
 <h1>Cart</h1>
 
 {% include 'cart/cart_table.html' %}
