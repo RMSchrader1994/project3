@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.forms.models import ModelForm
+from multiselectfield import MultiSelectField
 
 
 class Character(models.Model):
@@ -27,6 +29,14 @@ class Character(models.Model):
         ('m', 'MALE'),
         ('f', 'FEMALE'),
         )
+        
+    GUILD_CHOICES = (
+        ('fighters', 'FIGHTERS'),
+        ('mages', 'MAGES'),
+        ('undaunted', 'UNDAUNTED'),
+        ('thieves', 'THIEVES'),
+        ('dark brotherhood', 'DARK BROTHERHOOD'),
+        )
     
 
     """
@@ -41,8 +51,11 @@ class Character(models.Model):
     race = models.CharField(max_length=20, choices=RACE_CHOICES, default='breton')
     classes = models.CharField(max_length=20, choices=CLASSES_CHOICES, default='dragonknight')
     gender = models.CharField(max_length=20, choices=GENDER_CHOICES, default='m')
+    guild = MultiSelectField(choices=GUILD_CHOICES)
     published_date = models.DateTimeField(blank=True, null=True)
     tag = models.CharField(max_length=30, blank=True, null=True)
+
+  
     
 
     def publish(self):

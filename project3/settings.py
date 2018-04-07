@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'cart',
     'django_forms_bootstrap',
     'django_gravatar',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [

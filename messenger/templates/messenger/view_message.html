@@ -21,6 +21,17 @@
             color: #373737;
             font-family: 'Indie Flower', cursive;
         }
+        .btn {
+        background: #373737;
+        color: #C0B283;
+        width: 25%;
+        padding: 15px;
+        font-size: 25px;
+        text-align: center;
+        border: solid white 5px;
+        width: 32%;
+        margin: 0 auto;
+    }
 </style>
 <br />
 <div class="message">
@@ -28,6 +39,9 @@
 <h2>From: {{ message.sender }}</h2>
 <br />
 <p>{{ message.body }}</p>
+<hr>
+<button class="btn btn-default" onclick="location.href='{% url 'inbox' %}'">Inbox</button>
 </div>
+
 
 {% endblock content %}

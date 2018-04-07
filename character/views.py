@@ -44,4 +44,4 @@ def edit_character(request, id):
         print("It's the GET")
         
     form = CharacterForm(instance=characters)
-    return render(request, "character/create.html", {'form': form})
+    return render(request, "character/edit.html", {'form': form})
