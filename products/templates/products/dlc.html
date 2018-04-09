@@ -9,28 +9,39 @@
         width: 35%;
         height: 250px;
         margin-bottom: 15px;
+        margin-top: 10px;
     } 
     .info {
         float: right;
         width: 65%;
         background-color: #F4F4F4;
-        padding: 10px;
         height: 250px;
         text-align: center;
+        font-family: 'Cinzel Decorative', cursive;
+        margin-top:10px;
     }
     p {
         color: #373737;
         padding: 15px;
         box-sizing: border-box;
+        font-family: 'Cinzel Decorative', cursive;
         
     }
     
     h2, h5, h6  {
         color: #C0B283;
+        font-family: 'Amarante', cursive;
     }
      h1 {
          color: #373737;
+         font-family: 'Amarante', cursive;
      }
+     
+     .col-lg-4 {
+         height: 650px;
+         border: solid 1px #F4F4F4;
+     }
+     
     
 </style>
 
@@ -39,10 +50,9 @@
 <h1>Store</h1>
 </div>
 </div>
-<hr>
 <div class='row'>
     {% for product in product %}
-    <div class='col-md-4 col-offset-md-1'>
+    <div class='col-lg-4 col-offset-lg-1'>
         <img src="{{ MEDIA_URL }}{{ product.image }}" class="product_img"></img>
             <div class="info">
                 <h2>{{product.name}}</h2>
@@ -62,5 +72,4 @@
     </div>
     {% endfor %}
 </div>
-<hr>
 {% endblock %}

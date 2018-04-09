@@ -4,6 +4,7 @@
 <style>
     body {
         background: #DCD0C0;
+        font-family: 'Cinzel Decorative', cursive;
     }
     .col-lg-4 {
         background: #F4F4F4;
@@ -25,9 +26,11 @@
     h1 {
         color: #373737;
         display: inline;
+        font-family: 'Amarante', cursive;
     }
-    h6 {
+    h5 {
         color: #373737;
+        font-family: 'Amarante', cursive;
     }
     .pic {
         width: 100%;
@@ -35,8 +38,8 @@
     }
 </style>
 <br />
-    <h1>{{ characters.name }} <button class="btn btn-default" onclick="location.href='{% url 'character_list' %}'">Back To Blog</button></h1>
-    <h6><strong> #</strong>{{ characters.tag }}</h6>
+    <h1>{{ characters.name }} <button class="btn btn-default" onclick="location.href='{% url 'character_list' %}'">Back To List</button></h1>
+    <h5><strong> #</strong>{{ characters.tag }}</h5>
     <div class="row">
          <hr>
         <div class="col-lg-4">

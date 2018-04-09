@@ -1,10 +1,10 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-<link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Indie+Flower" rel="stylesheet">
 <style>
     body {
             background: #DCD0C0;
+            font-family: 'Cinzel Decorative', cursive;
         }
     .message {
             background: #F4F4F4;
@@ -14,12 +14,12 @@
         }
         h1, h2 {
             color: #C0B283;
-            font-family: 'Eagle Lake', cursive;
+            font-family: 'Amarante', cursive;
         }
         
         p {
             color: #373737;
-            font-family: 'Indie Flower', cursive;
+            font-family: 'Cinzel Decorative', cursive;
         }
         .btn {
         background: #373737;
@@ -31,14 +31,15 @@
         border: solid white 5px;
         width: 32%;
         margin: 0 auto;
+        font-family: 'Amarante', cursive;
     }
 </style>
 <br />
 <div class="message">
 <h1>{{ message.subject }}</h1>
-<h2>From: {{ message.sender }}</h2>
 <br />
-<p>{{ message.body }}</p>
+<p>{{ message.body }}<br /><br /><br /><br />
+Sincerely, <br /> <h2>{{ message.sender }}</h2></p>
 <hr>
 <button class="btn btn-default" onclick="location.href='{% url 'inbox' %}'">Inbox</button>
 </div>
