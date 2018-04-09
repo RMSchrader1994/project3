@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^$', get_index, name='home'),
     url(r'^accounts/', include(accounts_urls)),
-    url(r'^messenger/', include(messenger_urls)),
+    url(r'^inbox/', include(messenger_urls)),
     url(r'^products/', include(products_urls)),
     url(r'^checkout/', include(checkout_urls)),
     url(r'^cart/', include(cart_urls)),

@@ -11,6 +11,9 @@
     h1 {
     color: #C0B283;
     }
+    h2 {
+        color: #373737;
+    }
     .containers {
     padding: 30px;
     width: 100%;
@@ -26,6 +29,7 @@
 
 <form method="POST" enctype="multipart/form-data">
     <h1>Compose</h1>
+    <h2>All fields required to create a character!</h2>
     {% csrf_token %}
     {{ form  | as_bootstrap }}
     <input type="Submit" value="Create"/>

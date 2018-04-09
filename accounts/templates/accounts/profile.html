@@ -1,6 +1,40 @@
 {% extends 'home/base.html' %}
-{% load gravatar %}
+{% load bootstrap_tags %}
 {% block content %}
-    <h1>You are logged in as</h1>
-    <h2>{{ user.username }}</h2>
+<style>
+    body {
+    background: #DCD0C0;
+    }
+    h1 {
+       text-align: center; 
+       color: #373737;
+    }
+    h2 {
+       text-align: center;
+       color: #C0B283;
+       background: #373737;
+       width: 65%;
+    }
+    #profile {
+        background-color: #F4F4F4;
+        padding: 50px;
+        width: 50%;
+        margin: 50px auto 10px auto;
+    }
+    
+</style>
+    <br />
+    <div id="profile">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h1>You are logged in as</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-4">
+            <h2>{{ user.username }}</h2>  
+        </div>
+    </div>
+    </div>
+     
 {% endblock content %}

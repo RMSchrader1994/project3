@@ -46,14 +46,14 @@ class Character(models.Model):
     # author is linked to a registered
     # user in the 'auth_user' table.
     author = models.ForeignKey('auth.User')
-    name = models.CharField(max_length=200)
-    description = models.TextField()
-    race = models.CharField(max_length=20, choices=RACE_CHOICES, default='breton')
-    classes = models.CharField(max_length=20, choices=CLASSES_CHOICES, default='dragonknight')
-    gender = models.CharField(max_length=20, choices=GENDER_CHOICES, default='m')
-    guild = MultiSelectField(choices=GUILD_CHOICES)
-    published_date = models.DateTimeField(blank=True, null=True)
-    tag = models.CharField(max_length=30, blank=True, null=True)
+    name = models.CharField(max_length=200, blank=False)
+    description = models.TextField(blank=False)
+    race = models.CharField(max_length=20, choices=RACE_CHOICES, default='breton', blank=False)
+    classes = models.CharField(max_length=200, choices=CLASSES_CHOICES, default='dragonknight', blank=False)
+    gender = models.CharField(max_length=200, choices=GENDER_CHOICES, default='m', blank=False)
+    guild = MultiSelectField(choices=GUILD_CHOICES, blank=False)
+    published_date = models.DateTimeField(blank=False, null=True)
+    tag = models.CharField(max_length=300, blank=False, null=True)
 
   
     

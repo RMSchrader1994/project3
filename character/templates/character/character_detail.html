@@ -13,8 +13,20 @@
         font-size: 50px;
         border: solid #DCD0C0 15px;
     }
+    .col-lg-8 {
+       background: #F4F4F4;
+        color: #C0B283;
+        padding: 15px;
+        height: 350px;
+        font-size: 25px;
+        border: solid #DCD0C0 15px; 
+    }
     
-    h1, h6 {
+    h1 {
+        color: #373737;
+        display: inline;
+    }
+    h6 {
         color: #373737;
     }
     .pic {
@@ -26,19 +38,24 @@
     <h1>{{ characters.name }} <button class="btn btn-default" onclick="location.href='{% url 'character_list' %}'">Back To Blog</button></h1>
     <h6><strong> #</strong>{{ characters.tag }}</h6>
     <div class="row">
+         <hr>
         <div class="col-lg-4">
-        {{ characters.gender }} <br />
-        {{ characters.race }} <br />
-        {{ characters.classes}}
+        <h1>Gender:</h1> {{ characters.gender }} <br />
+        <h1>Race:</h1> {{ characters.race }} <br />
+        <h1>Class:</h1> {{ characters.classes}}
         </div>
     <div class="col-lg-4">
-        {{ characters.guild }}
+        <h1>Guild:</h1> {{ characters.guild }}
     </div>
     <div class="col-lg-4">
         <img src="{{MEDIA_URL}}{{ characters.image }}" class="pic"></img>
     </div>
+  
     </div>
     <div class="row">
-        <div class="col-lg-6"></div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <h1>Description:</h1> {{ characters.description }}
+        </div>
     </div>
+     <hr>
 {% endblock content %}
