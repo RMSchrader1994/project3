@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import resolve
-from .views import *
+from .views import login, register
+from .forms import *
 
 # Create your tests here.
 class TestAccounts(TestCase):
