@@ -13,10 +13,11 @@
         background: #F4F4F4;
         color: #C0B283;
         padding: 15px;
-        height: 350px;
+        height: 400px;
         font-family: 'Bilbo', cursive;
         font-size: 50px;
         border: solid #DCD0C0 15px;
+        overflow: scroll; 
     }
     .col-lg-8 {
        background: #F4F4F4;
@@ -25,6 +26,7 @@
         height: 350px;
         font-size: 25px;
         border: solid #DCD0C0 15px; 
+        overflow: scroll; 
     }
     
     h1 {
@@ -38,7 +40,7 @@
     }
     .pic {
         width: 100%;
-        height: 300px;
+        height: 350px;
     }
 </style>
 <br />
@@ -47,8 +49,8 @@
     <div class="row">
          <hr>
         <div class="col-lg-4">
-        <h1>Gender:</h1> {{ characters.gender }} <br />
-        <h1>Race:</h1> {{ characters.race }} <br />
+        <h1>Gender:</h1> {{ characters.gender }} <br /><br />
+        <h1>Race:</h1> {{ characters.race }} <br /><br />
         <h1>Class:</h1> {{ characters.classes}}
         </div>
     <div class="col-lg-4">
