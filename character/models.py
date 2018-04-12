@@ -26,8 +26,8 @@ class Character(models.Model):
     )
     
     GENDER_CHOICES = (
-        ('m', 'MALE'),
-        ('f', 'FEMALE'),
+        ('male', 'MALE'),
+        ('female', 'FEMALE'),
         )
         
     GUILD_CHOICES = (
