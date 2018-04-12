@@ -10,3 +10,8 @@ class TestHomePage(TestCase):
     def test_root_url_returns_view(self):
         found = resolve('/')
         self.assertEqual(found.func, get_index)
+    def test_get_home(self):
+        page = self.client.get("/")
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, "home/index.html")
+        

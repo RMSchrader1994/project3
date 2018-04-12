@@ -12,35 +12,79 @@ This site provides players with a chance to recreate their characters from ESO w
  
 ### How does it work
  
-This site uses simple HTML and CSS. The site is also styled with **Bootstrap**. The quiz has been created using **Javascript** to provide a total score and send an alert message when completed. Github was used to deploy this web page. **Javascript** was also used for the automatic typing on the welcome page. The site can be viewed [HERE](https://rmschrader1994.github.io/project1/)
+This site uses HTML and CSS to display pages. The site is also styled with **Bootstrap**. **Django** was used to create the site, with **SQLite** used to store info. The site can be viewed [HERE](https://becca-elderscrollsonline.herokuapp.com)
 
 ## Features
  
 ### Existing Features
-- Welcome page with audio, automated typing, and redirect to home page
-- Home page with multiple links to each page.
-  - Navbar to navigate to other pages
-Sliding, horizontal timeline of events
-Pictures with changing opacity when hovered over (clicked on when using mobile)
-- Quiz page for viewers to test their knowledge
-    - Form for viewers to input their answers or check the correct box
-    - Submit button so viewers can see how they scored on the quiz
 
-### Features Left to Implement
-- Return correct answers after submitting quiz
+- Vertical Navbar
+- Index page with login and register buttons
+    - Login form
+    - Registtation form
+    - On submit redirect to profile page
+- Profile app with username
+- Characters app
+    - compose form link
+        - Char fields
+        - Text Boxes
+        - Drop Downs Menus
+        - Checkbox lists
+    - Individual Character options
+        - Creator can edit the character details
+        - Creator can delete character
+        - All details listed out on seperate page, with back to list button
+    - Image determined by which race is selected
+- Store app with 12 unique exapnsion packs with varying prices, pictures, and descriptions
+    - Add to cart buttons
+- Cart app with a table showing product image, name, quantity, price, and total.
+    - Checkout button, links to checkout page
+- Checkout app
+    - Cart table with same info
+    - Buyer shipping info
+    - Credit Card Details
+    - Submit Payment button
+        - Redirects user to store page
+        - Clears cart
+- Messaging app
+    - Inbox
+        - compose button link
+        - inbox/sent items links
+        - list of messages (sender, subject, part of message, date/time sent), click to view
+    - Sent
+        - Same layout as inbox except messages are the users sent files
+    - Compose
+        - Form with subject, body, and recipient inputs
+    - View Message
+        - Message with all info for message
+        - Back to inbox button
+- Logout option
+
 
 ## Tech Used
 
 ### Some the tech used includes:
+
+- **Django Framework**
+    - Used to create site and all associated apps
+    - Used for testing purposes
+- **SQLite**
+    - Used to store info:
+        - Characters
+        - DLCs
+        - Messages
 - **HTML**, **CSS** and **Javascript**
-  - Base languages used to create website
+  - Base languages used to create webpages
 - [Bootstrap](http://getbootstrap.com/)
     - We use **Bootstrap** to give our project a simple, responsive layout
 - [JQuery](https://jquery.com)
     - Use **JQuery** for boostrap and displaying modal
+- **Stripe**
+ - Used to process credit card payments
 
 ## Testing
 - All code used on the site has been tested to ensure everything is working as expected
+- Django Testing Framework used
 - Site viewed and tested in the following browsers:
   - Google Chrome
   - Microsoft Edge
@@ -53,13 +97,9 @@ Pictures with changing opacity when hovered over (clicked on when using mobile)
 ## Credits
 
 ### Media
-The photos used in this site were obtained from various locations over google and screen shots of the games
-All game info and names created by Jane Jensen and games all produced by Sierra and Pinkerton Road Studios
+The photos used in this site were obtained from various locations over google and screen shots of the game
+All game info and names developed by ZeniMax Online Studios and published by Bethesda Softworks and ZeniMax Online Studios.
 
-### Complicated Code
-- Automated typing Javascript code for the welcome page:
-    - https://codepen.io/gavra/pen/tEpzn
-- Timeline of events:
-    - https://bootsnipp.com/snippets/a3BjR
+
 
 
