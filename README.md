@@ -64,6 +64,9 @@ This site uses HTML and CSS to display pages. The site is also styled with **Boo
         - Back to inbox button
 - Logout option
 
+### Features Left to Implement
+- Complete more testing for the site overall
+
 
 ## Tech Used
 
@@ -106,4 +109,5 @@ The photos used in this site were obtained from various locations over google an
 All game info and names developed by ZeniMax Online Studios and published by Bethesda Softworks and ZeniMax Online Studios.
 
 
-
+### Vertical Navbar
+The code for the vertical navbar was orignally based on this code [LINK](https://www.bootply.com/AAcC6rXv4R).
