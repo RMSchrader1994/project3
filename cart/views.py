@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from products.models import DLC
 from decimal import Decimal
 from cart.utils import get_cart_items
 
+@login_required(login_url='/accounts/login')
 def view_cart(request):
-    
     cart = request.session.get('cart', {})
     context = get_cart_items(cart)
     return render(request, "cart/view_cart.html", context)

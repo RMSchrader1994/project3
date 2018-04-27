@@ -56,16 +56,19 @@ class TestAccounts(TestCase):
                                  "Passwords do not match",
                                  form.full_clean())
                                  
-    # def test_unique_emails(self):
-    #     form = UserRegistrationForm({
-    #         'username': 'megan',
-    #         'email': 'admin@example.com',
-    #         'password1': 'megmeg!',
-    #         'password2': 'megmeg!',
-    #     })
-    #     self.assertRaisesMessage(form.ValidationError,
-    #                              'Email addresses must be unique.',
-    #                              form.full_clean())
+    def test_forms_register_with_duplicate_email(self):
+        self.user = User.objects.create_user(username='user', password='password', email="user@example.com")
+        details = {
+            'username': 'a_different_user',
+            'email': 'user@example.com',
+            'password1': 'password',
+            'password2': 'password'
+        }
+        response = self.client.post("/accounts/register", details)
+        self.assertFormError(response, 'form', 'email', 'Email addresses must be unique.')
+        
+        
+        
                                  
    
         

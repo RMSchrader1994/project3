@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .forms import OrderForm, MakePaymentForm
 from products.models import *
@@ -13,7 +14,7 @@ from django.contrib import messages
 stripe.api_key = settings.STRIPE_SECRET_KEY
 # Create your views here.
 
-
+@login_required(login_url='/accounts/login')
 def checkout(request):
 
     if request.method=="POST":

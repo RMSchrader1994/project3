@@ -6,14 +6,14 @@ from .views import *
 class TestAccounts(TestCase):
     def test_create_url_returns_ok(self):
         response = self.client.get("/character/create/")
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
     def test_create_url_returns_view(self):
         found = resolve("/character/create/")
         self.assertEqual(found.func, create_characters)
         
     def test_character_list_url_returns_ok(self):
         response = self.client.get("/character/")
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
     def test_character_list_url_returns_view(self):
         found = resolve("/character/")
         self.assertEqual(found.func, character_list)
