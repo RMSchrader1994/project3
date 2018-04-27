@@ -1,6 +1,10 @@
 # Elder Scrolls Online Website
  
 ## Overview
+
+### Initial Project
+
+Originally this site was going to be based on a different game but was changed early on because I was more enthusiastic about the Elder Scrolls online game.
  
 ### What is this website for?
  
@@ -17,29 +21,29 @@ This site uses HTML and CSS to display pages. The site is also styled with **Boo
 ## Features
  
 ### Existing Features
-
+- URL redirect to login if a user is not logged in
 - Vertical Navbar
 - Index page with login and register buttons
     - Login form
-    - Registtation form
+    - Registration form
     - On submit redirect to profile page
-- Profile app with username
+- Profile app with a username
 - Characters app
     - compose form link
-        - Char fields
-        - Text Boxes
-        - Drop Downs Menus
-        - Checkbox lists
+        - Char fields: name, tag
+        - Text Boxes: description
+        - Drop Downs Menus: gender, race, class
+        - Checkbox lists: guild
     - Individual Character options
-        - Creator can edit the character details
-        - Creator can delete character
-        - All details listed out on seperate page, with back to list button
+        - A creator can edit the character details
+        - A creator can delete character
+        - All details listed out on a separate page, with back to list button
     - Image determined by which race is selected
-- Store app with 12 unique exapnsion packs with varying prices, pictures, and descriptions
+- Store app with 12 unique expansion packs with varying prices, pictures, and descriptions
     - Add to cart buttons
 - Cart app with a table showing product image, name, quantity, price, and total.
-    - Checkout button, links to checkout page
-- Checkout app
+    - Checkout button links to the checkout page
+- Check out app
     - Cart table with same info
     - Buyer shipping info
     - Credit Card Details
@@ -52,7 +56,7 @@ This site uses HTML and CSS to display pages. The site is also styled with **Boo
         - inbox/sent items links
         - list of messages (sender, subject, part of message, date/time sent), click to view
     - Sent
-        - Same layout as inbox except messages are the users sent files
+        - The same layout as inbox except messages are the users sent files
     - Compose
         - Form with subject, body, and recipient inputs
     - View Message
@@ -66,7 +70,7 @@ This site uses HTML and CSS to display pages. The site is also styled with **Boo
 ### Some the tech used includes:
 
 - **Django Framework**
-    - Used to create site and all associated apps
+    - Used to create the site and all associated apps
     - Used for testing purposes
 - **SQLite**
     - Used to store info:
@@ -74,17 +78,18 @@ This site uses HTML and CSS to display pages. The site is also styled with **Boo
         - DLCs
         - Messages
 - **HTML**, **CSS** and **Javascript**
-  - Base languages used to create webpages
+  - Base languages used to create web pages
 - [Bootstrap](http://getbootstrap.com/)
     - We use **Bootstrap** to give our project a simple, responsive layout
 - [JQuery](https://jquery.com)
-    - Use **JQuery** for boostrap and displaying modal
+    - Use **JQuery** for bootstrap and displaying modal
 - **Stripe**
  - Used to process credit card payments
 
 ## Testing
 - All code used on the site has been tested to ensure everything is working as expected
-- Django Testing Framework used
+- Django Testing Framework used throughout the site
+- Travis CI used for testing before deployment
 - Site viewed and tested in the following browsers:
   - Google Chrome
   - Microsoft Edge
@@ -97,9 +102,8 @@ This site uses HTML and CSS to display pages. The site is also styled with **Boo
 ## Credits
 
 ### Media
-The photos used in this site were obtained from various locations over google and screen shots of the game
+The photos used in this site were obtained from various locations over google and screenshots of the game
 All game info and names developed by ZeniMax Online Studios and published by Bethesda Softworks and ZeniMax Online Studios.
-
 
 
 
