@@ -63,7 +63,7 @@
 <body>
     <!-- Fixed masthead -->
 <nav class="navbar navbar-inverse navbar-fixed-left">
-    <a class="navbar-brand" href="{% url 'profile' %}"><img src="/media/images/elder-scrolls-online_logo.jpg" class="logo"></img></a>
+    <a class="navbar-brand"><img src="/media/images/elder-scrolls-online_logo.jpg" class="logo"></img></a>
         <ul class="nav navbar-nav">
             {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i><span> Profile</span></a></li>
