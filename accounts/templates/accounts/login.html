@@ -31,23 +31,6 @@
         font-family: 'Amarante', cursive;
     }
     </style>
-
-<nav class="navbar navbar-inverse navbar-fixed-left">
-    <a class="navbar-brand"><img src="/media/images/elder-scrolls-online_logo.jpg" class="logo"></img></a>
-        <ul class="nav navbar-nav">
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i><span> Profile</span></a></li>
-                <li><a href="{% url 'character_list' %}"><i class="fa fa-users"></i><span> Character</span></a></li>
-                <li><a href="{% url 'inbox' %}"><i class="fa fa-envelope-square"></i><span> Inbox </span><label class="badge badge-light">{{ user.messages_received.all|length }}</label></a></li>
-                <li><a href="{% url 'get_dlc' %}"><i class="fa fa-tv"></i><span> Store</span></a></li>
-                <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i><span> Cart </span><label class="badge badge-light">{{ items_in_cart }}</label></a></li>
-                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i><span> Log Out</span></a></li>
-            {% else %}
-                <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i><span> Register</span></a></li>
-                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i><span> Log In</span></a></li>
-            {% endif %}
-        </ul>
-</nav>
     <form role="form" method="post">
         <legend>Login</legend>
         {% csrf_token %}
